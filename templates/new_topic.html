@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Start a New Topic
+{% endblock %}
+
+{% block breadcrumb %}
+    <li class="breadcrumb-item"><a href="{% url 'home' %}">讨论版</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a></li>
+    <li class="breadcrumb-item active">新的主题</li>
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'board_topics' board.pk %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_subject">标题</label>
+            <input type="text" class="form-control" id="id_subject" name="subject">
+        </div>
+        <div class="form-group">
+            <label for="id_message">内容</label>
+            <textarea class="form-control" name="message" id="id_username" cols="30" rows="5"></textarea>
+        </div>
+        <buttom type="submit" class="btn btn-primary">提交</buttom>
+    </form>
+{% endblock %}
