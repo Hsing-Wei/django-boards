@@ -23,7 +23,6 @@ def board_topics(request, pk):
 @login_required
 def new_topic(request, pk):
     board = get_object_or_404(Board, pk=pk)
-
     if request.method == 'POST':
         form = NewTopicForm(request.POST)
         if form.is_valid():
@@ -31,7 +30,7 @@ def new_topic(request, pk):
             topic.board = board
             topic.starter = request.user
             topic.save()
-            post = Post.objects.create(
+            Post.objects.create(
                 message=form.cleaned_data.get('message'),
                 topic=topic,
                 created_by=request.user
@@ -39,7 +38,7 @@ def new_topic(request, pk):
             return redirect('topic_posts', pk=pk, topic_pk=topic.pk)
     else:
         form = NewTopicForm()
-    return render(request, 'new_topic.html', {'board': board, 'form': form,})
+    return render(request, 'new_topic.html', {'board': board, 'form': form})
 
 
 def topic_posts(request, pk, topic_pk):

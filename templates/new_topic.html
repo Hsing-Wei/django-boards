@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Start a New Topic
+    新的主题
 {% endblock %}
 
 {% block breadcrumb %}
@@ -11,9 +11,9 @@
 {% endblock %}
 
 {% block content %}
-    <form method="post">
+    <form method="post" novalidate>
         {% csrf_token %}
         {% include 'includes/form.html' %}
-        <buttom type="submit" class="btn btn-success">提交</buttom>
+        <button type="submit" class="btn btn-success">提交</button>
     </form>
 {% endblock %}
