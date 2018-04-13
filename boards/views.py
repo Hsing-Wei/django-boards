@@ -9,8 +9,7 @@ from django.utils import timezone
 from django.utils.decorators import method_decorator
 from django.views.generic import UpdateView
 
-from accounts.forms import PostForm
-from boards.forms import NewTopicForm
+from boards.forms import NewTopicForm, PostForm
 from boards.models import Board, Post, Topic
 
 
@@ -101,7 +100,6 @@ def reply_topic(request, pk, topic_pk):
                 id=post.pk,
                 page=topic.get_page_count()
             )
-
             return redirect(topic_post_url)
     else:
         form = PostForm()
