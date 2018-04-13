@@ -1,3 +1,9 @@
 .navbar-brand {
     font-family: 'Peralta', cursive;
 }
+
+footer {
+    height: 60px;
+    padding: 15px 0;
+    background-color: #e9ecef;
+}
