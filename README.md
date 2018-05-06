@@ -3,10 +3,6 @@ An exercise following guide at http://t.cn/Rmj8pmp
 
 ## Running the Project Locally
 
-First, clone the repository to your local machine:
-
-`git clone git@github.com:sibtc/django-beginners-guide.git`
-
 Install the requirements:
 
 `pip install -r requirements.txt`
