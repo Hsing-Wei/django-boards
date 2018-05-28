@@ -1,6 +1,8 @@
 # django-boards
 An exercise following guide at http://t.cn/Rmj8pmp
 
+![SnapCrab_Maple Boards - [InPrivate] ‎- Microsoft Edge_2018-4-24_23-53-1_No-001.png](https://i.loli.net/2018/05/28/5b0c124f6f2a3.png)
+
 ## Running the Project Locally
 
 Install the requirements:
